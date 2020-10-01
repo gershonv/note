@@ -1,17 +1,14 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+/node_modules
 
-# dependencies
-node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
+# Production
 /build
 
-# misc
+# Generated files
+.docusaurus
+.cache-loader
+
+# Misc
 .DS_Store
 .env.local
 .env.development.local
@@ -21,10 +18,6 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# upload
-/server/upload/*
-/server/output/*
 
 dist
 

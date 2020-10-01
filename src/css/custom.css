@@ -1,0 +1,90 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4569d4;
+  --ifm-color-primary-dark: #2f57cd;
+  --ifm-color-primary-darker: #2d52c2;
+  --ifm-color-primary-darkest: #2544a0;
+  --ifm-color-primary-light: #5c7bd9;
+  --ifm-color-primary-lighter: #6785dc;
+  --ifm-color-primary-lightest: #89a0e4;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Raleway', PingFangSC-Light, 'PingFang SC', 'Microsoft Yahei', Helvetica,
+    sans-serif;
+  --ifm-toc-link-color: #454d64;
+  --ifm-navbar-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
+  --ifm-toc-border-color: #f7f7f7;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum', 'tnum';
+  color: #454d64;
+  font-size: 15px;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: #d4cbba;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.markdown {
+  line-height: 1.60625;
+}
+
+a {
+  color: #4569d4;
+}
+
+article a {
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+strong {
+  color: #000;
+}
+
+.token-line {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+}
+.token.comment {
+  font-style: normal !important;
+}
+
+.small {
+  width: 30em;
+}
+
+.mgreen {
+  background-color: #25c2a0;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0.2rem;
+}
+
+.blue {
+  background-color: #1877f2;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0.2rem;
+}

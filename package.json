@@ -1,25 +1,35 @@
 {
-  "name": "note",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "alvin-note",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "dev": "npm run docs:dev",
-    "build": "npm run docs:build",
-    "page": "node ./utils/page.js p",
-    "push": "node ./utils/push"
+    "start": "docusaurus start",
+    "dev": "npm run start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve"
   },
   "dependencies": {
-    "vuepress": "^1.5.2",
-    "vuepress-plugin-mathjax": "^1.2.8",
-    "vuepress-plugin-medium-zoom": "^1.1.8"
+    "@cmfcmf/docusaurus-search-local": "^0.2.0",
+    "@docusaurus/core": "2.0.0-alpha.64",
+    "@docusaurus/preset-classic": "2.0.0-alpha.64",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.39",
+    "@mdx-js/react": "^1.5.8",
+    "clsx": "^1.1.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
-  "devDependencies": {
-    "chalk": "^3.0.0",
-    "commander": "^4.1.0",
-    "inquirer": "^7.0.3",
-    "watchpack": "^1.6.1"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

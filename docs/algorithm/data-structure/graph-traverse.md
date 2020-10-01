@@ -20,7 +20,7 @@ date: 2020-05-23 19:57:46
 
 :::
 
-## 广度优先遍历 - BFS <Badge text="队列、BFS" />
+## 广度优先遍历 - BFS
 
 广度优先算法会从指定的第一个顶点开始遍历图，先访问这个顶点的所有相邻顶点，然后再访问这些相邻顶点的相邻顶点，以此类推。最终，广度优先算法会先广后深地访问图中的所有顶点。
 
@@ -44,7 +44,7 @@ date: 2020-05-23 19:57:46
 :::details 队列、字典类、图代码
 
 ```js
-let Queue = (function() {
+let Queue = (function () {
   const items = new WeakMap()
 
   class Queue {
@@ -322,7 +322,7 @@ pred = { A: null, B: 'A', ... }
 下面是对 `breadthFirstSearch()`方法的改进，用来返回从起始顶点开始到其它所有顶点间的距离，以及所有顶点的前置顶点。
 
 ```js {25,26}
-let BFS = function(graph, startVertex) {
+let BFS = function (graph, startVertex) {
   let vertices = graph.getVertices()
   let adjList = graph.getAdjList()
   let color = initializeColor(vertices)
@@ -613,7 +613,7 @@ const prim = graph => {
 
 :::
 
-## 深度优先遍历 - DFS <Badge text="栈" />
+## 深度优先遍历 - DFS
 
 深度优先算法从图的第一个顶点开始，沿着这个顶点的一条路径递归查找到最后一个顶点，然后返回并探查路径上的其它路径，直到所有路径都被访问到。最终，深度优先算法会先深后广地访问图中的所有顶点。下面是深度优先遍历的示意图：
 

@@ -101,7 +101,7 @@ insert(key) {
 在 `insertNode()`函数中，我们需要根据新添加节点的 `key` 的大小来递归查找树的左侧子节点或者右侧子节点，因为根据我们的二叉搜索树的定义，值小的节点永远保存在左侧子节点上，值大的节点（包括值相等的情况）永远保存在右侧子节点上。下面是 `insertNode()`函数的实现代码：
 
 ```js
-let insertNode = function(node, newNode) {
+let insertNode = function (node, newNode) {
   if (newNode.key < node.key) {
     if (node.left === null) node.left = newNode
     else insertNode(node.left, newNode)
@@ -134,7 +134,7 @@ let insertNode = function(node, newNode) {
 
 ```js
 // 前序遍历
-let preOrderTraverseNode = function(node, callback) {
+let preOrderTraverseNode = function (node, callback) {
   if (node !== null) {
     callback(node.key)
     preOrderTraverseNode(node.left, callback)
@@ -143,7 +143,7 @@ let preOrderTraverseNode = function(node, callback) {
 }
 
 // 中序遍历
-let inOrderTraverseNode = function(node, callback) {
+let inOrderTraverseNode = function (node, callback) {
   if (node !== null) {
     inOrderTraverseNode(node.left, callback)
     callback(node.key)
@@ -152,7 +152,7 @@ let inOrderTraverseNode = function(node, callback) {
 }
 
 // 后续遍历
-let postOrderTraverseNode = function(node, callback) {
+let postOrderTraverseNode = function (node, callback) {
   if (node !== null) {
     postOrderTraverseNode(node.left, callback)
     postOrderTraverseNode(node.right, callback)
@@ -177,7 +177,7 @@ postOrderTraverse(callback) {
 }
 ```
 
-#### 前序遍历分析 <Badge text="根左右" />
+#### 前序遍历分析
 
 为了构建本文一开始的那棵树，我们执行下面的代码，然后测试 `preOrderTraverse()` 方法：
 
@@ -211,7 +211,7 @@ tree.preOrderTraverse(value => console.log(value))
 
 我们将树的根节点作为第一个节点传入，首先打印的就是根节点 11，然后开始遍历左子树，这将依次打印左子树中的所有左子节点，依次是 7、5、3。当节点 3 的 `left` 为 `null` 时，递归返回，继续查找节点 3 的右子节点，此时节点 3 的 `right` 值也为 `null`，于是继续向上返回到节点 5，开始遍历节点 5 的右子节点，于是打印节点 6......最终所有的节点就按照这个递归顺序进行遍历。
 
-#### 中序遍历分析 <Badge text="左根右" />
+#### 中序遍历分析
 
 然后我们再来看看中序遍历的情况。
 
@@ -226,7 +226,7 @@ tree.postOrderTraverse(value => console.log(value))
 
 同样的，我们将根节点作为第一个节点传入，递归到左子树的最后一个左子节点 3，由于节点 3 的 `left` 为 `null`，所以递归返回，打印节点 3，然后继续查找节点 3 的右子节点，节点 3 的 `right` 值也为 `null`，递归返回到上一层节点 5，开始打印节点 5，之后再查找节点 5 的右子节点......最终整棵树按照这个顺序完成遍历。
 
-#### 后序遍历分析 <Badge text="左右根" />
+#### 后序遍历分析
 
 最后再来看看后序遍历的情况。
 
@@ -255,7 +255,7 @@ tree.postOrderTraverse(value => console.log(value))
 
 ```js
 // 返回树中的最小节点
-let minNode = function(node) {
+let minNode = function (node) {
   let current = node
   while (current && current.left) {
     current = current.left
@@ -263,7 +263,7 @@ let minNode = function(node) {
   return current
 }
 // 返回树中的最大节点
-let maxNode = function(node) {
+let maxNode = function (node) {
   let current = node
   while (current && current.right) {
     current = current.right
@@ -275,7 +275,7 @@ let maxNode = function(node) {
 第三种方式是搜索特定的值，我们需要比较要搜索的值与当前节点的值，如果要搜索的值小于当前节点的值，则从当前节点开始递归查找左子数（左子节点）。如果要搜索的值大于当前节点的值，则从当前节点开始递归查找右子树（右子节点）。按照这个逻辑，我们的 `searchNode()`函数实现如下：
 
 ```js
-let searchNode = function(node, key) {
+let searchNode = function (node, key) {
   if (!node) return null
   if (node.key > key) return searchNode(node.left, key)
   else if (node.key < key) return searchNode(node.right, key)
@@ -314,7 +314,7 @@ console.log(tree.search(27)) // null
 最后我们再来看一下从树中移除一个节点的过程，这个过程要稍微复杂一些。先来看看删除树节点的函数 `removeNode()`的代码，稍后我们再来详细讲解整个执行过程。
 
 ```js
-let removeNode = function(node, key) {
+let removeNode = function (node, key) {
   if (node === null) return null
 
   if (key < node.key) {
@@ -421,7 +421,7 @@ function Node(key) {
   this.right = null
 }
 
-let removeNode = function(node, key) {
+let removeNode = function (node, key) {
   if (node === null) return null
 
   if (key < node.key) {
@@ -455,7 +455,7 @@ let removeNode = function(node, key) {
   }
 }
 
-let insertNode = function(node, newNode) {
+let insertNode = function (node, newNode) {
   if (newNode.key < node.key) {
     if (node.left === null) node.left = newNode
     else insertNode(node.left, newNode)
@@ -466,7 +466,7 @@ let insertNode = function(node, newNode) {
 }
 
 // 前序遍历
-let preOrderTraverseNode = function(node, callback) {
+let preOrderTraverseNode = function (node, callback) {
   if (node !== null) {
     callback(node.key)
     preOrderTraverseNode(node.left, callback)
@@ -475,7 +475,7 @@ let preOrderTraverseNode = function(node, callback) {
 }
 
 // 中序遍历
-let inOrderTraverseNode = function(node, callback) {
+let inOrderTraverseNode = function (node, callback) {
   if (node !== null) {
     inOrderTraverseNode(node.left, callback)
     callback(node.key)
@@ -484,7 +484,7 @@ let inOrderTraverseNode = function(node, callback) {
 }
 
 // 后续遍历
-let postOrderTraverseNode = function(node, callback) {
+let postOrderTraverseNode = function (node, callback) {
   if (node !== null) {
     postOrderTraverseNode(node.left, callback)
     postOrderTraverseNode(node.right, callback)
@@ -493,7 +493,7 @@ let postOrderTraverseNode = function(node, callback) {
 }
 
 // 返回树中的最小节点
-let minNode = function(node) {
+let minNode = function (node) {
   let current = node
   while (current && current.left) {
     current = current.left
@@ -501,7 +501,7 @@ let minNode = function(node) {
   return current
 }
 // 返回树中的最大节点
-let maxNode = function(node) {
+let maxNode = function (node) {
   let current = node
   while (current && current.right) {
     current = current.right
@@ -509,7 +509,7 @@ let maxNode = function(node) {
   return current
 }
 
-let searchNode = function(node, key) {
+let searchNode = function (node, key) {
   if (!node) return null
   if (node.key > key) return searchNode(node.left, key)
   else if (node.key < key) return searchNode(node.right, key)

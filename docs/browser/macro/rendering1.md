@@ -57,14 +57,14 @@ date: 2020-06-13 14:52:01
 从图中可以看出，CSS 样式来源主要有三种：
 
 - 通过 link 引用的外部 CSS 文件
-- \<style\> 标记内的 CSS
+- `<style>` 标记内的 CSS
 - 元素的 style 属性内嵌的 CSS
 
 和 HTML 文件一样，浏览器也是无法直接理解这些纯文本的 CSS 样式，所以**当渲染引擎接收到 CSS 文本时，会执行一个转换操作，将 CSS 文本转换为浏览器可以理解的结构——styleSheets**。
 
 为了加深理解，你可以在 Chrome 控制台中查看其结构，只需要在控制台中输入 document.styleSheets，然后就看到如下图所示的结构：
 
-<img src='https://static001.geekbang.org/resource/image/8e/ab/8ec7d5ecfadcd05b3f1ec762223a9aab.png' class='smaller center'>
+<img src='https://static001.geekbang.org/resource/image/8e/ab/8ec7d5ecfadcd05b3f1ec762223a9aab.png' class='smaller center' />
 
 从图中可以看出，这个样式表包含了很多种样式，已经把那三种来源的样式都包含进去了。当然样式表的具体结构不是我们今天讨论的重点，你只需要知道渲染引擎会把获取到的 CSS 文本全部转换为 styleSheets 结构中的数据，并且该结构同时具备了查询和修改功能，这会为后面的样式操作提供基础。
 
@@ -127,10 +127,8 @@ Chrome 在布局阶段需要完成两个任务：创建布局树和布局计算�
 
 从上图可以看出，DOM 树中所有不可见的节点都没有包含到布局树中。为了构建布局树，浏览器大体上完成了下面这些工作：
 
-<blockquote class='box'>
 1. 遍历 DOM 树中的所有可见节点，并把这些节点加到布局树中；
 2. 而不可见的节点会被布局树忽略掉，如 head 标签下面的全部内容，再比如 body.p.span 这个元素，因为它的属性包含 dispaly:none，所以这个元素也没有被包进布局树。
-</blockquote>
 
 ### 布局计算
 
@@ -144,14 +142,6 @@ Chrome 在布局阶段需要完成两个任务：创建布局树和布局计算�
 
 从图中可以看出，本节内容我们介绍了渲染流程的前三个阶段：DOM 生成、样式计算和布局。要点可大致总结为如下：
 
-<blockquote class='box'>
-
 - 浏览器不能直接理解 HTML 数据，所以第一步需要将其转换为浏览器能够理解的 DOM 树结构；
 - 生成 DOM 树后，还需要根据 CSS 样式表，来计算出 DOM 树所有节点的样式
 - 最后计算 DOM 元素的布局信息，使其都保存在布局树中。
-
-</blockquote>
-
----
-
-思考题请看 [渲染流程](../torture/rendering.md)

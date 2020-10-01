@@ -40,8 +40,6 @@ JS 执行代码后产生的执行上下文栈如图所示：
 
 ![](https://gitee.com/alvin0216/cdn/raw/master/img/browser/js/stack/6.png)
 
-<blockquote class='box'>
-
 第一步，创建全局上下文，并将其压入栈底。
 
 第二步，是调用 addAll 函数。为 addAll 创建执行上下文栈并押入栈中。
@@ -49,8 +47,6 @@ JS 执行代码后产生的执行上下文栈如图所示：
 第三步，在 addAll 函数中执行了 add 函数，为 add 创建执行上下文栈并押入栈中。
 
 当 add 执行完毕并返回时，add 函数出栈，以此类推。当整个应用程序结束的时候，栈才被清空。
-
-</blockquote>
 
 ### 模拟调用栈
 

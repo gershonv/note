@@ -80,7 +80,7 @@ var search = function(nums, target) {}
 答案：
 
 ```js
-var search = function(nums, target) {
+var search = function (nums, target) {
   let left = 0,
     right = nums.length - 1
   while (left <= right) {
@@ -97,7 +97,7 @@ var search = function(nums, target) {
 }
 ```
 
-<h3>1、为什么 while 循环的条件中是 <=，而不是 <？</h3>
+1、为什么 `while` 循环的条件中是 <=，而不是 <？
 
 答：因为初始化 `right` 的赋值是 `nums.length - 1`，即最后一个元素的索引，而不是 `nums.length`。
 
@@ -127,7 +127,7 @@ while (left < right) {
 return nums[left] == target ? left : -1
 ```
 
-<h3>2、为什么 left = mid + 1，right = mid - 1？我看有的代码是 right = mid 或者 left = mid，没有这些加加减减，到底怎么回事，怎么判断</h3>
+2、为什么 left = mid + 1，right = mid - 1？我看有的代码是 right = mid 或者 left = mid，没有这些加加减减，到底怎么回事，怎么判断
 
 答：这也是二分查找的一个难点，不过只要你能理解前面的内容，就能够很容易判断。
 
@@ -182,7 +182,7 @@ return nums[left] == target ? left : -1
 
 ```js
 // 基本写法 right = nums.length - 1, while(left <= right)
-var search1 = function(nums, target) {
+var search1 = function (nums, target) {
   let left = 0,
     right = nums.length - 1
   while (left <= right) {
@@ -199,7 +199,7 @@ var search1 = function(nums, target) {
 }
 
 // 写法 2
-var search2 = function(nums, target) {
+var search2 = function (nums, target) {
   let left = 0,
     right = nums.length - 1
   while (left <= right) {
@@ -218,7 +218,7 @@ var search2 = function(nums, target) {
 }
 
 // 写法 3
-var search = function(nums, target) {
+var search = function (nums, target) {
   let left = 0,
     right = nums.length - 1
   while (left <= right) {
@@ -264,7 +264,7 @@ var searchRange = function(nums, target) {}
 :::details 答案
 
 ```js
-var searchRange = function(nums, target) {
+var searchRange = function (nums, target) {
   let min = 0,
     max = nums.length - 1
 

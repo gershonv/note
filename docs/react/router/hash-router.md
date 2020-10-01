@@ -11,8 +11,6 @@ date: 2020-07-25 16:51:46
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![](https://gitee.com/alvin0216/cdn/raw/master/img/react/hash-router.png) | ![](https://gitee.com/alvin0216/cdn/raw/master/img/react/history.png) |
 
-<Badge text='hash 路由' />
-
 `www.test.com/#/` 就是 `Hash URL`，当 `#` 后面的哈希值发生变化时，不会向服务器请求数据，可以通过 `hashchange` 事件来监听到 URL 的变化，从而进行跳转页面。
 
 举个例子：

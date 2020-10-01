@@ -78,8 +78,6 @@ date: 2020-08-21 09:43:02
 <meta name="keywords" content="alvin's note" />
 ```
 
-详见 [理解 meta](../html/meta.md)
-
 ### link 标签：减少重复
 
 有时候为了用户访问方便或者出于历史原因，对于同一个页面会有多个网址，又或者存在某些重定向页面，比如：

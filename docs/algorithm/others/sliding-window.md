@@ -49,7 +49,7 @@ while (right < s.length) {
 - [Leetcode 刷题总结之滑动窗口法（尺取法）](https://zhuanlan.zhihu.com/p/61564531)
 - [滑动窗口技巧](https://labuladong.gitbook.io/algo/suan-fa-si-wei-xi-lie/hua-dong-chuang-kou-ji-qiao-jin-jie)
 
-## 3 无重复字符的最长子串 <Badge text='中等' />
+## 3 无重复字符的最长子串
 
 [链接](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/): 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
@@ -81,7 +81,7 @@ var lengthOfLongestSubstring = function (s) {}
 ![无重复字符最长字串](https://gitee.com/alvin0216/cdn/raw/master/img/algorithm/others/无重复字符最长字串.gif)
 
 ```js
-var lengthOfLongestSubstring = function(s) {
+var lengthOfLongestSubstring = function (s) {
   let start = 0
   let maxLen = 0
   let end = 0
@@ -109,7 +109,7 @@ var lengthOfLongestSubstring = function(s) {
 - map 存储各个字符最后出现的位置，`{ 'a' => 3, 'b' => 7, 'c' => 5 }`
 - 每次循环计算最大值
 
-## 209 长度最小的子数组 <Badge text='中等' />
+## 209 长度最小的子数组
 
 ```js
 给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的 连续 子数组，
@@ -125,7 +125,7 @@ var lengthOfLongestSubstring = function(s) {
 :::details 答案
 
 ```js
-var minSubArrayLen = function(s, nums) {
+var minSubArrayLen = function (s, nums) {
   let start = 0
   let end = 0
   let sum = 0
@@ -177,7 +177,7 @@ var checkInclusion = function(s1, s2) {}
 :::details 答案
 
 ```js
-var checkInclusion = function(s1, s2) {
+var checkInclusion = function (s1, s2) {
   let window = {}
   let dictionary = {} // 字典存储
   for (const char of s1) {
@@ -226,4 +226,4 @@ function isEqual(obj1, obj2) {
 
 :::
 
-## 30 串联所有单词的子串 <Badge text='困难' type='error' />
+## 30 串联所有单词的子串

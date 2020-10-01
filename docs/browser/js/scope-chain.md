@@ -125,11 +125,11 @@ function foo() {
   let test1 = 1
   const test2 = 2
   var innerBar = {
-    getName: function() {
+    getName: function () {
       console.log(test1)
       return myName
     },
-    setName: function(newName) {
+    setName: function (newName) {
       myName = newName
     }
   }
@@ -153,11 +153,7 @@ console.log(bar.getName())
 
 之所以是<span class='orange'>专属背包</span>，是因为除了 setName 和 getName 函数之外，**其他任何地方都是无法访问该背包的**，我们就可以把这个背包称为 foo 函数的闭包。
 
-<blockquote class='box'>
-
 好了，现在我们终于可以给闭包一个正式的定义了。**在 JavaScript 中，根据词法作用域的规则，内部函数总是可以访问其外部函数中声明的变量，当通过调用一个外部函数返回一个内部函数后，即使该外部函数已经执行结束了，但是内部函数引用外部函数的变量依然保存在内存中，我们就把这些变量的集合称为闭包。比如外部函数是 foo，那么这些变量的集合就称为 foo 函数的闭包。**
-
-</blockquote>
 
 那这些闭包是如何使用的呢？当执行到 bar.setName 方法中的 myName = "极客邦"这句代码时，JavaScript 引擎会沿着“当前执行上下文–>foo 函数闭包–> 全局执行上下文”的顺序来查找 myName 变量，你可以参考下面的调用栈状态图：
 
