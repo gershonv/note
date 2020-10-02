@@ -5,11 +5,12 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'alvin', // Usually your GitHub org/user name.
+  projectName: 'study note', // Usually your repo name.
   themeConfig: {
     prism: {
-      theme: require('prism-react-renderer/themes/github')
+      theme: require('prism-react-renderer/themes/github'),
+      defaultLanguage: 'javascript'
     },
     metadatas: [
       // SEO
@@ -30,7 +31,13 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          to: 'http/',
+          activeBasePath: 'http',
+          label: 'HTTP',
+          position: 'left'
+        },
+        {
+          href: 'https://github.com/alvin00216',
           label: 'GitHub',
           position: 'right'
         }
@@ -44,9 +51,6 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js')
         },
-        blog: {
-          showReadingTime: true
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
         }
@@ -55,6 +59,17 @@ module.exports = {
     '@docusaurus/theme-live-codeblock'
   ],
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'http',
+        path: 'http',
+        routeBasePath: '/http',
+        sidebarPath: require.resolve('./sidebarsHTTP.js')
+        // showLastUpdateAuthor: true,
+        // showLastUpdateTime: true
+      }
+    ],
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
       {

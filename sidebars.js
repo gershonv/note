@@ -71,47 +71,47 @@ module.exports = {
         原理: ['webpack/principle/overview', 'webpack/principle/self-loader']
       }
     ],
-    HTTP: [
-      'http/what-is-http',
-      'http/network-model',
-      'http/dns',
-      {
-        TCP: [
-          'http/tcp/connection',
-          'http/tcp/wave',
-          'http/tcp/syn',
-          'http/tcp/udp',
-          'http/tcp/keep-alive'
-        ]
-      },
-      {
-        'HTTP 报文': [
-          'http/structure/overview',
-          'http/structure/method',
-          'http/structure/status-code',
-          'http/structure/body'
-        ]
-      },
-      {
-        缓存: ['http/cache/index', 'http/cache/proxy']
-      },
-      {
-        cookie: ['http/cookie/index', 'http/cookie/samesite']
-      },
-      'http/cross-domain',
-      {
-        HTTPS: [
-          'http/https/https',
-          'http/https/certificate',
-          'http/https/tsl',
-          'http/https/tsl13',
-          'http/https/https-perf'
-        ]
-      },
-      {
-        HTTP2: ['http/http2/http2', 'http/http2/http2-deep', 'http/http2/http3']
-      }
-    ],
+    // HTTP: [
+    //   'http/what-is-http',
+    //   'http/network-model',
+    //   'http/dns',
+    //   {
+    //     TCP: [
+    //       'http/tcp/connection',
+    //       'http/tcp/wave',
+    //       'http/tcp/syn',
+    //       'http/tcp/udp',
+    //       'http/tcp/keep-alive'
+    //     ]
+    //   },
+    //   {
+    //     'HTTP 报文': [
+    //       'http/structure/overview',
+    //       'http/structure/method',
+    //       'http/structure/status-code',
+    //       'http/structure/body'
+    //     ]
+    //   },
+    //   {
+    //     缓存: ['http/cache/index', 'http/cache/proxy']
+    //   },
+    //   {
+    //     cookie: ['http/cookie/index', 'http/cookie/samesite']
+    //   },
+    //   'http/cross-domain',
+    //   {
+    //     HTTPS: [
+    //       'http/https/https',
+    //       'http/https/certificate',
+    //       'http/https/tsl',
+    //       'http/https/tsl13',
+    //       'http/https/https-perf'
+    //     ]
+    //   },
+    //   {
+    //     HTTP2: ['http/http2/http2', 'http/http2/http2-deep', 'http/http2/http3']
+    //   }
+    // ],
     浏览器: [
       {
         宏观下的浏览器: [
